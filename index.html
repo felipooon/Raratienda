@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rara Tienda</title>
+  <style>
+    :root {
+      --naranjo-pastel: #FFB380;
+      --gris-claro: #f9f7f6;
+      --gris-texto: #555;
+      --verde-suave: #c7e8c2;
+      --fuente: 'Nunito', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--fuente);
+      background-color: var(--gris-claro);
+      color: var(--gris-texto);
+    }
+
+    header {
+      background-color: var(--naranjo-pastel);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      background-color: white;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--gris-texto);
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .producto {
+      background-color: white;
+      border-radius: 1rem;
+      padding: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .producto img {
+      max-width: 100%;
+      border-radius: 0.5rem;
+    }
+
+    footer {
+      background-color: var(--naranjo-pastel);
+      padding: 2rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rara Tienda</h1>
+    <p>Productos únicos para amantes de las aves</p>
+  </header>
+
+  <nav>
+    <a href="#catalogo">Catálogo</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#tienda">Sobre Rara Tienda</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section class="section" id="catalogo">
+    <h2>Catálogo</h2>
+    <div class="productos">
+      <div class="producto">
+        <img src="https://via.placeholder.com/300x200" alt="Calcetines con aves">
+        <h3>Calcetines con aves</h3>
+        <p>Diseños únicos inspirados en aves nativas.</p>
+        <p><strong>$7.990</strong></p>
+      </div>
+      <div class="producto">
+        <img src="https://via.placeholder.com/300x200" alt="Cuaderno de campo">
+        <h3>Cuaderno de campo</h3>
+        <p>Ideal para tus salidas de observación.</p>
+        <p><strong>$4.500</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>Hola, soy la creadora de Rara Tienda. Trabajo en monitoreo de aves, educación ambiental y diseño de productos que conectan con la naturaleza.</p>
+  </section>
+
+  <section class="section" id="tienda">
+    <h2>Sobre Rara Tienda</h2>
+    <p>Rara Tienda nace como un homenaje al ave nativa "rara" y a la idea de ser únicos. Nuestro propósito es ofrecer productos con alma, inspirados en la vida silvestre, la observación de aves y el arte artesanal.</p>
+  </section>
+
+  <section class="section" id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Tienes dudas o quieres colaborar? Escríbeme:</p>
+    <ul>
+      <li>Correo: contacto@raratienda.cl</li>
+      <li>Instagram: @raratienda</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Rara Tienda. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
