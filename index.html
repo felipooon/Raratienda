@@ -6,122 +6,130 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rara Tienda</title>
   <style>
-    body {
-      font-family: sans-serif;
-      background-color: #fff8f0;
-      color: #444;
-      margin: 0;
+    :root {
+      --naranjo-pastel: #FFB380;
+      --gris-claro: #f9f7f6;
+      --gris-texto: #555;
+      --verde-suave: #c7e8c2;
+      --fuente: 'Nunito', sans-serif;
     }
-    header, footer {
-      background-color: #FFB380;
+
+    body {
+      margin: 0;
+      font-family: var(--fuente);
+      background-color: var(--gris-claro);
+      color: var(--gris-texto);
+    }
+
+    header {
+      background-color: var(--naranjo-pastel);
       padding: 2rem;
       text-align: center;
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
     nav {
+      background-color: white;
+      padding: 1rem;
       display: flex;
       justify-content: center;
       gap: 2rem;
-      background: #fff;
-      padding: 1rem;
     }
+
     nav a {
       text-decoration: none;
-      color: #444;
+      color: var(--gris-texto);
       font-weight: bold;
     }
+
     .section {
       padding: 2rem;
-      text-align: center;
+      max-width: 1000px;
+      margin: auto;
     }
-    .categorias {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
+
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
     }
-    .categoria {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+    .producto {
+      background-color: white;
+      border-radius: 1rem;
       padding: 1rem;
-      width: 250px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    .categoria img {
-      width: 100%;
-      border-radius: 10px;
+
+    .producto img {
+      max-width: 100%;
+      border-radius: 0.5rem;
     }
-    a.btn {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background: #FFB380;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-    }
-    .info {
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: left;
-    }
-    .info h3 {
-      color: #FF8C42;
-    }
-    .info p, .info a {
-      font-size: 1rem;
-      line-height: 1.6;
+
+    footer {
+      background-color: var(--naranjo-pastel);
+      padding: 2rem;
+      text-align: center;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Rara Tienda</h1>
-    <p>Catálogo de productos para amantes de las aves</p>
+    <p>De pajareros para pajareros y amantes de la naturaleza</p>
   </header>
 
   <nav>
-    <a href="calcetines.html">Calcetines</a>
-    <a href="pins.html">Pins</a>
-    <a href="accesorios.html">Accesorios</a>
+    <a href="#catalogo">Catálogo</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#tienda">Sobre Rara Tienda</a>
+    <a href="#contacto">Contacto</a>
   </nav>
 
-  <section class="section">
-    <h2>Categorías</h2>
-    <div class="categorias">
-      <div class="categoria">
-        <img src="https://via.placeholder.com/300x200?text=Calcetines" alt="Calcetines">
-        <h3>Calcetines</h3>
-        <a class="btn" href="calcetines.html">Ver categoría</a>
+  <section class="section" id="catalogo">
+    <h2>Catálogo</h2>
+    <div class="productos">
+      <div class="producto">
+        <img src="https://via.placeholder.com/300x200" alt="Calcetines con aves">
+        <h3>Calcetines enplumados</h3>
+        <p>Diseños únicos inspirados en aves nativas.</p>
+        <p><strong>$6.990</strong></p>
       </div>
-      <div class="categoria">
-        <img src="https://via.placeholder.com/300x200?text=Pins" alt="Pins">
-        <h3>Pins</h3>
-        <a class="btn" href="pins.html">Ver categoría</a>
-      </div>
-      <div class="categoria">
-        <img src="https://via.placeholder.com/300x200?text=Accesorios" alt="Accesorios">
-        <h3>Accesorios</h3>
-        <a class="btn" href="accesorios.html">Ver categoría</a>
+      <div class="producto">
+        <img src="https://via.placeholder.com/300x200" alt="Cuaderno de campo">
+        <h3>kit de limpieza óptico</h3>
+        <p>Ideal para tus salidas de observación.</p>
+        <p><strong>$5.500</strong></p>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="info">
-      <h2>Sobre Nosotros</h2>
-      <p>Somos Rara Tienda, un proyecto inspirado en el amor por las aves nativas de Chile. Diseñamos y seleccionamos productos para personas curiosas, observadoras y apasionadas por la naturaleza.</p>
-    </div>
+  <section class="section" id="sobre-mi">
+    <h2>Sobre nosotros</h2>
+    <p>Somos una pareja de entusiastas pajareros de la región de Los Lagos, que espera disfrutes de estos novedosos productos tanto como nosotros al momento de escogerlos y crearlos.</p>
   </section>
 
-  <section class="section">
-    <div class="info">
-      <h2>Contacto</h2>
-      <p>Puedes escribirnos a <a href="mailto:contacto@raratienda.cl">contacto@raratienda.cl</a> o seguirnos en Instagram: <a href="https://instagram.com/raratienda" target="_blank">@raratienda</a></p>
-    </div>
+  <section class="section" id="tienda">
+    <h2>Sobre Rara Tienda</h2>
+    <p>Rara Tienda nace como un homenaje al ave nativa "rara" y a la idea de ser únicos. Nuestro propósito es ofrecer productos con alma, inspirados en la vida silvestre, la observación de aves y el arte artesanal.</p>
+  </section>
+
+  <section class="section" id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Tienes dudas o quieres colaborar? Escríbeme:</p>
+    <ul>
+      <li>Correo: contacto@raratienda.cl</li>
+      <li>Instagram: @raratienda</li>
+    </ul>
   </section>
 
   <footer>
-    <p>&copy; 2025 Rara Tienda</p>
+    <p>&copy; 2025 Rara Tienda. Todos los derechos reservados.</p>
   </footer>
 </body>
 </html>
