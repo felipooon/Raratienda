@@ -99,13 +99,14 @@
   toggle.addEventListener('click', () => {
     links.classList.toggle('show');
     toggle.classList.toggle('open');
-    toggle.innerHTML = toggle.classList.contains('open') ? '&times;' : '&#9776;';
+    //esta linea convierte el boton hamburguesa en una X
+    //toggle.innerHTML = toggle.classList.contains('open') ? '&times;' : '&#9776;';
   });
 
   close.addEventListener('click', () => {
     links.classList.remove('show');
     toggle.classList.remove('open');
-    toggle.innerHTML = '&#9776;';
+    //toggle.innerHTML = '&#9776;';
   });
 });
 </script>
