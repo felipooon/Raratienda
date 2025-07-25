@@ -1,135 +1,114 @@
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rara Tienda</title>
-  <style>
-    :root {
-      --naranjo-pastel: #FFB380;
-      --gris-claro: #f9f7f6;
-      --gris-texto: #555;
-      --verde-suave: #c7e8c2;
-      --fuente: 'Nunito', sans-serif;
-    }
-
-    body {
-      margin: 0;
-      font-family: var(--fuente);
-      background-color: var(--gris-claro);
-      color: var(--gris-texto);
-    }
-
-    header {
-      background-color: var(--naranjo-pastel);
-      padding: 2rem;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    nav {
-      background-color: white;
-      padding: 1rem;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--gris-texto);
-      font-weight: bold;
-    }
-
-    .section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .productos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .producto {
-      background-color: white;
-      border-radius: 1rem;
-      padding: 1rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    .producto img {
-      max-width: 100%;
-      border-radius: 0.5rem;
-    }
-
-    footer {
-      background-color: var(--naranjo-pastel);
-      padding: 2rem;
-      text-align: center;
-      margin-top: 2rem;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
+
 <body>
+
   <header>
-    <h1>Rara Tienda</h1>
-    <p>De pajareros para pajareros y amantes de la naturaleza</p>
-  </header>
-
-  <nav>
-    <a href="#catalogo">Catálogo</a>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#tienda">Sobre Rara Tienda</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-
-  <section class="section" id="catalogo">
-    <h2>Catálogo</h2>
-    <div class="productos">
-      <div class="producto">
-        <img src="https://via.placeholder.com/300x200" alt="Calcetines con aves">
-        <h3>Calcetines enplumados</h3>
-        <p>Diseños únicos inspirados en aves nativas.</p>
-        <p><strong>$6.990</strong></p>
-      </div>
-      <div class="producto">
-        <img src="https://via.placeholder.com/300x200" alt="Cuaderno de campo">
-        <h3>kit de limpieza óptico</h3>
-        <p>Ideal para tus salidas de observación.</p>
-        <p><strong>$5.500</strong></p>
-      </div>
+  <nav class="navbar">
+    <div class="nav-left">
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      <a href="#" class="logo">Rara Tienda</a>
+      <ul class="nav-links" id="nav-links">
+        <button id="close-menu" class="close-button">&times;</button>
+        <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+        <li><a href="#acerca"><i class="fas fa-users"></i> Acerca</a></li>
+        <li><a href="#catalogo"><i class="fas fa-store"></i> Catálogo</a></li>
+        <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
+      </ul>
     </div>
-  </section>
+  </nav>
+</header>
 
-  <section class="section" id="sobre-mi">
-    <h2>Sobre nosotros</h2>
-    <p>Somos una pareja de entusiastas pajareros de la región de Los Lagos, que espera disfrutes de estos novedosos productos tanto como nosotros al momento de escogerlos y crearlos.</p>
-  </section>
+  <main>
+    <!-- Hero principal -->
+    <section id="inicio" class="intro">
+      <div class="container">
+        <h2>¡Bienvenid@ a Rara Tienda!</h2>
+        <p>Productos únicos como tú. Descubre nuestra colección exclusiva.</p>
+        <a href="#catalogo" class="button">Ver catálogo</a>
+      </div>
+    </section>
 
-  <section class="section" id="tienda">
-    <h2>Sobre Rara Tienda</h2>
-    <p>Rara Tienda nace como un homenaje al ave nativa "rara" y a la idea de ser únicos. Nuestro propósito es ofrecer productos con alma, inspirados en la vida silvestre, la observación de aves y el arte artesanal.</p>
-  </section>
+    <!-- Nosotros -->
+    <section id="acerca" class="nosotros">
+      <div class="container">
+        <h2>¿Quiénes somos?</h2>
+        <p>Somos una pareja de entusiastas pajareros de la región de Los Lagos, que espera disfrutes de estos novedosos productos tanto como nosotros al momento de escogerlos y crearlos.</p>
+      </div>
+    </section>
 
-  <section class="section" id="contacto">
-    <h2>Contacto</h2>
-    <p>¿Tienes dudas o quieres colaborar? Escríbeme:</p>
-    <ul>
-      <li>Correo: contacto@raratienda.cl</li>
-      <li>Instagram: @raratienda</li>
-    </ul>
-  </section>
+    <!-- Catálogo de productos -->
+    <section id="catalogo" class="catalogo">
+      <div class="intro">
+        <h2>Nuestros productos</h2>
+        <div class="catalogo">
+          <!-- Producto 1 -->
+          <div class="producto">
+            <img src="img/calcetines1.jpg" alt="Calcetines aves">
+            <h3>Calcetines Aves</h3>
+            <p>$6.000 CLP</p>
+            <button>Comprar</button>
+          </div>
 
-  <footer>
-    <p>&copy; 2025 Rara Tienda. Todos los derechos reservados.</p>
+          <!-- Producto 2 -->
+          <div class="producto">
+            <img src="img/pin1.jpg" alt="Pin ave rara">
+            <h3>Pins de aves</h3>
+            <p>$3.000 CLP</p>
+            <button>Comprar</button>
+          </div>
+
+          <!-- Agrega más productos aquí -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contacto">
+      <div class="container">
+        <h2>Contáctanos</h2>
+        <p>Escríbenos por WhatsApp o síguenos en redes sociales:</p>
+        <a href="https://wa.me/56930027170" class="btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://www.instagram.com/lararatienda/" class="btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Rara Tienda. Todos los derechos reservados.</p>
+    </div>
   </footer>
+
+<script>
+ document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById('menu-toggle');
+  const links = document.getElementById('nav-links');
+  const close = document.getElementById('close-menu');
+
+  toggle.addEventListener('click', () => {
+    links.classList.toggle('show');
+    toggle.classList.toggle('open');
+    toggle.innerHTML = toggle.classList.contains('open') ? '&times;' : '&#9776;';
+  });
+
+  close.addEventListener('click', () => {
+    links.classList.remove('show');
+    toggle.classList.remove('open');
+    toggle.innerHTML = '&#9776;';
+  });
+});
+</script>
+
 </body>
 </html>
