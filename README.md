@@ -74,5 +74,5 @@ Este proyecto está bajo licencia MIT. Consulta el archivo LICENSE para más inf
 
 ## 🎨 Créditos
 
-- Desarrollo: [Tu nombre o alias]
+- Desarrollo: Felipon
 - Inspiración y diseño: basado en conceptos de tiendas visuales y experiencias de usuario atractivas
