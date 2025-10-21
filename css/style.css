@@ -320,7 +320,40 @@ section {
 }
 
 /* Nosotros y Contacto */
-.nosotros, .contacto {
+/* Nosotros y Contacto */
+
+
+
+.nosotros {
+  position: relative;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden; /* evita que sobresalga la imagen */
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cubre todo el bloque */
+  z-index: -1; /* pone la imagen detrás del texto */
+}
+
+.contenido {
+  background-color: rgba(0, 0, 0, 0.5); /* Negro con 50% de transparencia */
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;  /* Bordes suaves opcionales */
+  max-width: 80%;       /* Para que no ocupe todo el ancho */
+}
+
+
+.contacto {
   height: 50vh;
   display: flex;
   flex-direction: column;
@@ -333,7 +366,7 @@ section {
 .nosotros h2 {
   font-size: 3.2rem;
   margin-bottom: 1rem;
-  color: var(--texto);
+   color: white; /* o #fff */
 }
 
 @media (max-width: 768px) {
