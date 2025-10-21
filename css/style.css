@@ -184,7 +184,7 @@ main {
   text-align: center;
   padding: 3rem 1rem;
 
-  background-image: url('/img/2.png'); /* Ruta a tu imagen */
+  background-image: url('img/2.png'); /* Ruta a tu imagen */
   background-size: cover;      /* Que la imagen cubra todo el contenedor */
   background-position: center; /* Centrar la imagen */
   background-repeat: no-repeat;/* No repetir la imagen */
