@@ -1,6 +1,7 @@
 /* Fuente base */
-body {
+html, body {
   font-family: 'Segoe UI', 'Roboto', sans-serif;
+  height: 100%;
   margin: 0;
   padding: 0;
   background-color: #fdfdfc;
@@ -11,6 +12,13 @@ main {
   width: 100%;
   padding: 0;
   margin: 0;
+  flex: 1;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Colores base */
@@ -166,13 +174,36 @@ main {
 /* Sección Intro */
 .intro {
   height: 67vh;
-  background-color: var(--secundario);
+  margin-top: 50px; /* Ajusta según la altura real */
+  position: relative;
+  /*background-color: var(--secundario);*/
   display: flex;
   flex-direction: column;
   justify-content: center; /* Centra verticalmente */
   align-items: center;     /* Centra horizontalmente */
   text-align: center;
   padding: 3rem 1rem;
+
+  background-image: url('../img/2.png'); /* Ruta a tu imagen */
+  background-size: cover;      /* Que la imagen cubra todo el contenedor */
+  background-position: center; /* Centrar la imagen */
+  background-repeat: no-repeat;/* No repetir la imagen */
+
+  color: var(--blanco); /* Para que el texto resalte sobre la imagen */
+}
+
+.intro::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(255, 255, 255, 0.3); /* blanco semi-transparente */
+  z-index: 0;
+}
+
+.intro > .container {
+  position: relative;
+  z-index: 1;
+  color: rgb(0, 0, 0); /* para que el texto se vea sobre el fondo claro */
 }
 
 .intro h2 {
@@ -210,6 +241,18 @@ main {
 /* Catálogo */
 .catalogo {
   padding: 2rem 1rem;
+  background-color: var(--gris-suave);
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.catalogo2 {
+  padding: 2rem 1rem;
+  margin-top: 50px; /* Ajusta según la altura real */
+  width: 100%;
   background-color: var(--gris-suave);
   display: flex;
   flex-wrap: wrap;
@@ -258,6 +301,12 @@ main {
 .catalogo .producto button:hover {
   background-color: var(--acento);
 }
+
+.catalogo-seccion {
+  margin-top: 0rem; /* Ajusta según el alto de tu navbar */
+}
+
+
 
 /* Secciones generales */
 section {
